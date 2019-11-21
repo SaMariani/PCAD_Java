@@ -48,19 +48,19 @@ public class WRunnable implements Runnable {
 			
 
 	}
-		
-		private void manageResearch (PrintWriter output , BufferedReader input) throws IOException{
-			output.println("OK");
-			String location = input.readLine();
-			String searchedW = input.readLine();
-			boolean result = serverRMI.research(searchedW, location);
-			if(result) output.println("OK");
-			else output.println("FAIL");
-		}
 
-		private void managePrint (PrintWriter output , BufferedReader input) throws IOException{
-			output.println("OK");
-			output.println(serverRMI.Print());
-			System.out.println("stampa: "+serverRMI.Print());
-		}
+	private void manageResearch (PrintWriter output , BufferedReader input) throws IOException{
+		output.println("OK");
+		String location = input.readLine();
+		String searchedW = input.readLine();
+		boolean result = serverRMI.research(searchedW, location);
+		if(result) output.println("OK");
+		else output.println("FAIL");
+	}
+
+	private void managePrint (PrintWriter output , BufferedReader input) throws IOException{
+		output.println("OK");
+		output.println(serverRMI.Print());
+		System.out.println("stampa: "+serverRMI.Print());
+	}
 }

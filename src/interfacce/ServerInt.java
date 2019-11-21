@@ -10,4 +10,5 @@ public interface ServerInt extends Serializable, Remote {
 	public String Print() throws RemoteException;
 	public String normalize(String words) throws RemoteException;
 	public void Store() throws RemoteException;
+	public String MostSearchedW() throws RemoteException;
 }

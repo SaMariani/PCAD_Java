@@ -40,6 +40,7 @@ public class ClientGUI extends JFrame {
     	protected JButton printButton;
     	protected JTextArea textArea;
     	protected JScrollPane scrollPane;
+    	protected JButton mswButton;
     	
 	/**
 	 * Launch the application.
@@ -143,6 +144,17 @@ public class ClientGUI extends JFrame {
 				});
 				printButton.setBounds(320, 140, 90, 25);
 				contentPane.add(printButton);
+				
+				mswButton = new JButton("Stampa parole più cercate");
+				mswButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						if (!checkIp()) return;
+						(new MyWorker(guiReference, "mostSearchedW", client,null,null)).execute();
+					}
+				});
+				mswButton.setBounds(280, 180, 200, 25);
+				contentPane.add(mswButton);
+				
 				
 				//creazione area di testo con scrollbar
 				textArea = new JTextArea(160, 250);

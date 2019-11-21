@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutionException;
 
 import javax.swing.SwingWorker;
 import interfacce.ClientInt;
-import server.Server;
+//import server.Server;
 
 public class MyWorker extends SwingWorker<Boolean, Void> {
 
@@ -13,7 +13,7 @@ public class MyWorker extends SwingWorker<Boolean, Void> {
 	private ClientInt client;
 	public String location;
 	public String searchedW;
-	public Server SER;
+	//public Server SER;
 	
 	public MyWorker(ClientGUI gui, String command, ClientInt client, String location, String searchedW) {
 		this.gui = gui;
@@ -28,6 +28,7 @@ public class MyWorker extends SwingWorker<Boolean, Void> {
 		switch(command) {
 		case "research": return client.research(location, searchedW);
 		case "print": return client.print();
+		case "mostSearchedW": return client.MostSearchedW();
 		default: throw new AssertionError();
 		}
 	}
@@ -56,12 +57,21 @@ public class MyWorker extends SwingWorker<Boolean, Void> {
 			break;
 		}
 		case "print": {
-			if (!result) gui.messageField.setText("IMPOSSIBILE CERCARE");
+			if (!result) gui.messageField.setText("IMPOSSIBILE STAMPARE");
 			else{
 				gui.messageField.setText("STAMPA EFFETTUATA");
 			}
 			break;
 		}
+		
+		case "mostSearchedW": {
+			if (!result) gui.messageField.setText("IMPOSSIBILE STAMPARE LE PAROLE PIU' CERCATE");
+			else{
+				gui.messageField.setText("STAMPA EFFETTUATA");
+			}
+			break;
+		}
+		
 		default: throw new AssertionError();
 		}
 	}

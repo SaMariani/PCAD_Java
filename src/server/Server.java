@@ -4,9 +4,15 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
+
+
 
 import client.ClientGUI;
 import interfacce.ServerInt;
@@ -16,8 +22,9 @@ public class Server implements ServerInt{
 	private static final long serialVersionUID = 1L;
 	
 	ConcurrentHashMap<String,HashMap<String,Integer>> Ricerche; //hashMap per le parole cercate nei vari luoghi
-	public String words;
-	public String location;
+	ConcurrentHashMap<String,HashMap<String,Integer>> MSW;      //hashmap per le 3 parole più cercate di ogni città M(ost)S(earched)W(ords)
+	public String words = "";
+	public String location = "";
 	Random random;
 	protected ServerGUI gui;
 	public ClientGUI Cgui; 
@@ -25,6 +32,7 @@ public class Server implements ServerInt{
 	public Server(ServerGUI x) {
 		gui=x;
 		Ricerche = new ConcurrentHashMap<String,HashMap<String,Integer>>();
+		MSW = new ConcurrentHashMap<String,HashMap<String,Integer>>();
 		try {
 			Registry r = null;
 			try {
@@ -67,17 +75,19 @@ public class Server implements ServerInt{
 	@Override
 	public void Store() throws RemoteException
 	{
-		
+		System.out.println(Ricerche + " 1");
 		int count;
 		HashMap<String, Integer> Words = new HashMap<String, Integer>();
-
+		System.out.println(Ricerche + " 2");
 		try {
 			String [] SplitW = this.words.split(" ");
-			
-			if(!this.Ricerche.containsKey(this.location))	{
-				Ricerche.put(this.location, Words);
+			System.out.println(Ricerche + " 3");
+			if(!this.Ricerche.containsKey(location))	{
+				System.out.println(Ricerche + " 4");
+				Ricerche.put(location, Words);
 			}
-			Words = this.Ricerche.get(this.location);
+			System.out.println(Ricerche + " 5");
+			Words = this.Ricerche.get(location);
 			for(String eachWord : SplitW) {
 				if(!Words.containsKey(eachWord)) {
 					Words.put(eachWord, 1);
@@ -87,7 +97,9 @@ public class Server implements ServerInt{
 					Words.replace(eachWord, count, count+1);	
 				}
 			}
+			System.out.println(Ricerche + " 6");
 			this.Ricerche.put(this.location, Words);
+			System.out.println(Ricerche + " 7");
 		}
 		catch(Exception e) {
 			throw new IllegalArgumentException("Store ERROR");
@@ -120,9 +132,9 @@ public class Server implements ServerInt{
 
 		try {
 			
-			for (String loc: Ricerche.keySet()){
+        	for (String loc: this.MSW.keySet()){
 	            String key = loc.toString();
-	            String value = Ricerche.get(loc).toString();
+	            String value = this.MSW.get(loc).toString();
 	            value = value.toString().replaceAll("=", ":");
 	            value = value.toString().replace("{", "[");
 	            value = value.toString().replace("}", "]");
@@ -130,10 +142,70 @@ public class Server implements ServerInt{
 				
 			}
 			return res;
-		}
+        }
 		catch (Exception e) {
-			throw new IllegalArgumentException("PrintDatabase");
+			throw new IllegalArgumentException("Print");
 		}
+	}
+	
+	
+	
+	@Override
+	public String MostSearchedW() throws RemoteException{
+		System.out.println(Ricerche);
+		MSW.clear();
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		HashMap<String, Integer> tmp = new HashMap<String, Integer>();
+		//int max;
+		//String maxKey;
+		
+		try	{
+			for(String citta : Ricerche.keySet())	{
+				//maxKey = "";
+				
+				map = Ricerche.get(citta);		
+				
+				System.out.println(Ricerche);
+				
+				List<Integer> occurrence = new ArrayList<Integer>();;
+				
+				System.out.println(2);
+				
+				for(String w : map.keySet()) {
+					System.out.println(2.1);
+					occurrence.add(map.get(w));
+				}
+				
+				System.out.println(3);
+				
+				Collections.sort(occurrence, Collections.reverseOrder());
+				
+				System.out.println(occurrence);
+				for(Integer i : occurrence) {
+					for(String s : map.keySet()) {
+						if(map.get(s) == i) {
+							tmp.put(s,i);
+							map.remove(s,i);
+							break;
+						}
+					}
+					if(tmp.size() == 3)
+						break;
+				}
+				
+				HashMap<String, Integer> nuova  = new HashMap<String, Integer>(tmp);
+				this.MSW.put(citta, nuova);
+				tmp.clear();
+				map.clear();
+			}
+			return Print();
+
+		}	
+		
+		catch(Exception e)	{
+			throw new IllegalArgumentException("MostSEarchedW");
+		}
+		
 	}
 	
 	

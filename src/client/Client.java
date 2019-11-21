@@ -42,4 +42,10 @@ public class Client implements ClientInt{
     		return(GUI.Update(server.Print()));
     	}
     	
+    	@Override
+    	public boolean MostSearchedW() throws RemoteException{
+    		return(GUI.Update(server.MostSearchedW()));
+    		//return true;
+    	}
+    	
 }
