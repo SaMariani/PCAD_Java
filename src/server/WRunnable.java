@@ -37,8 +37,10 @@ public class WRunnable implements Runnable {
 					default: {
 						output.println("FAIL");
 					}
-				
-				
+					case "mostSearchedW":{
+						manageMostSearchedW(output, input);
+						break;
+					}
 				}
 			
 			} catch (IOException e) {
@@ -62,5 +64,11 @@ public class WRunnable implements Runnable {
 		output.println("OK");
 		output.println(serverRMI.Print());
 		System.out.println("stampa: "+serverRMI.Print());
+	}
+
+	private void manageMostSearchedW (PrintWriter output , BufferedReader input) throws IOException{
+		output.println("OK");
+		output.println(serverRMI.MostSearchedW());
+		System.out.println("stampa: "+serverRMI.MostSearchedW());
 	}
 }
