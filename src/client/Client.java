@@ -38,14 +38,8 @@ public class Client implements ClientInt{
     	}
     	
     	@Override
-    	public boolean print() throws RemoteException {
-    		return(GUI.Update(server.Print()));
-    	}
-    	
-    	@Override
     	public boolean MostSearchedW() throws RemoteException{
     		return(GUI.Update(server.MostSearchedW()));
-    		//return true;
     	}
     	
 }
