@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="448b7d8b-6dc8-4ac0-a602-bfd04f8c358f" name="Default Changelist" comment="versione quasi finale Massi">
+    <list default="true" id="448b7d8b-6dc8-4ac0-a602-bfd04f8c358f" name="Default Changelist" comment="codice completo per app pcad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$1.class" afterDir="false" />
@@ -13,10 +13,10 @@
       <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/client/MyWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/MyWorker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/interfacce/ClientInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/interfacce/ClientInt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/WRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/WRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/bin/" />
@@ -32,10 +32,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/Client.java">
+        <entry file="file://$PROJECT_DIR$/src/client/MyWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+            <state relative-caret-position="864">
+              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -48,17 +48,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/AndroidS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
+            <state relative-caret-position="386">
               <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/WRunnable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2736">
-              <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
+            <state relative-caret-position="251">
+              <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+              <folding>
+                <element signature="e#1422#1499#0" expanded="true" />
+                <element signature="e#1498#1499#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,17 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/ServerGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/server/WRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+            <state relative-caret-position="180">
+              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -85,10 +89,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Print</find>
       <find>manageResearch</find>
       <find>managePrint</find>
       <find>MostSearchedW</find>
+      <find>Parole più frequenti stampate</find>
+      <find>Print</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/server</dir>
@@ -111,9 +116,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1061" />
+    <option name="x" value="380" />
     <option name="y" value="23" />
-    <option name="width" value="987" />
+    <option name="width" value="1668" />
     <option name="height" value="1072" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -122,6 +127,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -140,11 +146,22 @@
               <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,7 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientGUI">
+  <component name="RunManager" selected="Application.ServerGUI">
     <configuration name="ClientGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.ClientGUI" />
       <module name="PROGETTO_PCAD" />
@@ -205,8 +222,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ClientGUI" />
         <item itemvalue="Application.ServerGUI" />
+        <item itemvalue="Application.ClientGUI" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +247,8 @@
       <workItem from="1574934123278" duration="2120000" />
       <workItem from="1576180800379" duration="54000" />
       <workItem from="1576184567407" duration="682000" />
-      <workItem from="1576334336231" duration="793000" />
+      <workItem from="1576334336231" duration="2030000" />
+      <workItem from="1576428170367" duration="6736000" />
     </task>
     <task id="LOCAL-00001" summary="parte in java per progetto pcad (da versione su pcSamu)">
       <created>1574247091526</created>
@@ -253,11 +271,25 @@
       <option name="project" value="LOCAL" />
       <updated>1574934644939</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="codice completo per app pcad">
+      <created>1576335367905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576335367905</updated>
+    </task>
+    <task id="LOCAL-00005" summary="sistemato wrunnable">
+      <created>1576435751503</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576435751503</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19439000" />
+    <option name="totallyTimeSpent" value="27412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,10 +301,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1061" y="23" width="987" height="1072" extended-state="0" />
-    <editor active="true" />
+    <frame x="380" y="23" width="1668" height="1072" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25502646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15129152" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -281,13 +312,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29591838" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29591838" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3377551" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3377551" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -350,7 +381,9 @@
     <MESSAGE value="parte in java per progetto pcad (da versione su pcSamu)" />
     <MESSAGE value="versione quasi finale Massi" />
     <MESSAGE value="aggiunto in WRunnable metodo per android (manageMostSearchedW)" />
-    <option name="LAST_COMMIT_MESSAGE" value="aggiunto in WRunnable metodo per android (manageMostSearchedW)" />
+    <MESSAGE value="codice completo per app pcad" />
+    <MESSAGE value="sistemato wrunnable" />
+    <option name="LAST_COMMIT_MESSAGE" value="sistemato wrunnable" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../PROGETTO_PCAD_QUASI_FINALE/src/server/AndroidS.java">
@@ -373,13 +406,6 @@
     <entry file="file://$PROJECT_DIR$/bin/server/Server.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/MyWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/ClientGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
@@ -394,34 +420,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/MyWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/interfacce/ClientInt.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/AndroidS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid1136.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="169" column="12" selection-start-line="169" selection-start-column="12" selection-end-line="169" selection-end-column="12" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/hs_err_pid1141.log">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/ServerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/AndroidS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/WRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        <state relative-caret-position="314">
+          <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PROGETTO__PCAD/src/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
+          <folding>
+            <element signature="e#1422#1499#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

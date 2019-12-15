@@ -102,7 +102,8 @@ public class Server implements ServerInt{
 		if(words == null)
 			throw new IllegalArgumentException();
 		words = words.replaceAll("[^a-zA-Z]", " ");
-		words = words.replaceAll("  ", " ");    
+		words = words.replaceAll("\\s+", " ");
+		words = words.replaceAll("^\\s", "");
 		words = words.toLowerCase();
 		return words;
 	}
