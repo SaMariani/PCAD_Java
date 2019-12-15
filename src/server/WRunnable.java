@@ -56,16 +56,19 @@ public class WRunnable implements Runnable {
 		boolean result = serverRMI.research(searchedW, location);
 		if(result) output.println("OK");
 		else output.println("FAIL");
+		System.out.println("inserito location: "+location+"\ninserito stringa: "+searchedW);
 	}
 	private void managePrint (PrintWriter output , BufferedReader input) throws IOException{
 		output.println("OK");
- 		output.println(serverRMI.Print());
- 		System.out.println("stampa: "+serverRMI.Print());
+		String str = serverRMI.Print();
+		output.println(str);
+		System.out.println("stampato: "+str);
  	}
 
  	private void manageMostSearchedW (PrintWriter output , BufferedReader input) throws IOException{
  		output.println("OK");
- 		output.println(serverRMI.MostSearchedW());
- 		System.out.println("stampa: "+serverRMI.MostSearchedW());
+ 		String str = serverRMI.MostSearchedW();
+ 		output.println(str);
+ 		System.out.println("stampato: "+str);
  	}
  }
