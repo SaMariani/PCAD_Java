@@ -112,6 +112,8 @@ public class Server implements ServerInt{
 	public boolean StoreResearch(String location, String words) throws RemoteException {
 		this.location = normalize(location);
 		this.words = normalize(words);
+		if(this.location.isEmpty()||this.words.isEmpty())
+			return false;
 		Store();
 		return true;
 	} 
