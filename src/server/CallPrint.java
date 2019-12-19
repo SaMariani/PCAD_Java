@@ -11,7 +11,7 @@ public class CallPrint implements Callable<String> {
     }
 
     @Override
-    public String call() throws Exception {
+    public String call() {
         return data.MostSearchedW();
     }
 }

@@ -1,6 +1,5 @@
 package server;
 
-import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -11,16 +10,14 @@ public class Data {
 
     private String words;
     private String location;
-    private ConcurrentHashMap<String,HashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,HashMap<String,Integer>>();; //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
+    private ConcurrentHashMap<String,HashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,HashMap<String,Integer>>(); //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
     private ConcurrentHashMap<String,HashMap<String,Integer>> MSW = new ConcurrentHashMap<String,HashMap<String,Integer>>();
 
-    public boolean research(String words, String location) throws RemoteException {
-        if(StoreResearch(location, words))
-            return true;
-        return false;
+    public boolean research(String words, String location) {
+        return StoreResearch(location, words);
     }
 
-    public void Store() throws RemoteException {
+    public void Store() {
 
         int count;
         HashMap<String, Integer> Words = new HashMap<String, Integer>();
@@ -48,8 +45,7 @@ public class Data {
         }
     }
 
-    public String normalize(String words) throws RemoteException
-    {
+    public String normalize(String words) {
         if(words == null)
             throw new IllegalArgumentException();
         words = words.replaceAll("[^a-zA-Z]", " ");
@@ -59,25 +55,26 @@ public class Data {
         return words;
     }
 
-    public boolean StoreResearch(String location, String words) throws RemoteException {
+    public boolean StoreResearch(String location, String words) {
         this.location = normalize(location);
         this.words = normalize(words);
+        if(this.location.isEmpty()||this.words.isEmpty())
+            return false;
         Store();
         return true;
     }
 
-    public String Print() throws RemoteException
-    {
+    public String Print() {
         String res = "";
 
         try {
 
             for (String loc: this.MSW.keySet()){
-                String key = loc.toString();
+                String key = loc;
                 String value = this.MSW.get(loc).toString();
-                value = value.toString().replaceAll("=", ":");
-                value = value.toString().replace("{", "[");
-                value = value.toString().replace("}", "]");
+                value = value.replaceAll("=", ":");
+                value = value.replace("{", "[");
+                value = value.replace("}", "]");
                 res = res.concat(key + ": " + value + ", ");
             }
             //gui.Update("Parole più frequenti stampate");
@@ -88,7 +85,7 @@ public class Data {
         }
     }
 
-    public String MostSearchedW() throws RemoteException{
+    public String MostSearchedW() {
 
         HashMap<String, Integer> tmp = new HashMap<String, Integer>();
 
@@ -107,7 +104,7 @@ public class Data {
 
                 for(Integer i : occurrence) {
                     for(String s : map.keySet()) {
-                        if(map.get(s) == i) {
+                        if(map.get(s).equals(i)) {
                             tmp.put(s,i);
                             map.remove(s,i);
                             break;

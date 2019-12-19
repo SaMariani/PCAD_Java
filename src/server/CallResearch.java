@@ -1,10 +1,5 @@
 package server;
 
-import java.rmi.RemoteException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
 import java.util.concurrent.Callable;
 
 public class CallResearch implements Callable<Boolean> {
@@ -19,7 +14,7 @@ public class CallResearch implements Callable<Boolean> {
         this.data = database;
     }
     @Override
-    public Boolean call() throws Exception {
+    public Boolean call() {
         return data.research(words,location);
     }
 }
