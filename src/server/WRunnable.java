@@ -28,10 +28,6 @@ public class WRunnable implements Runnable {
 						manageResearch(output, input);
 						break;
 					}
-					case "print":{
-						managePrint(output, input);
-						break;
-					}
  					default: {
  						output.println("FAIL");
  					}
@@ -58,12 +54,6 @@ public class WRunnable implements Runnable {
 		else output.println("FAIL");
 		System.out.println("inserito location: "+location+"\ninserito stringa: "+searchedW);
 	}
-	private void managePrint (PrintWriter output , BufferedReader input) throws IOException{
-		output.println("OK");
-		String str = serverRMI.Print();
-		output.println(str);
-		System.out.println("stampato: "+str);
- 	}
 
  	private void manageMostSearchedW (PrintWriter output , BufferedReader input) throws IOException{
  		output.println("OK");
