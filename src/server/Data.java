@@ -23,12 +23,12 @@ public class Data {
         HashMap<String, Integer> Words = new HashMap<String, Integer>();
 
         try {
-            String [] SplitW = this.words.split(" ");
+            String [] SplitW = words.split(" ");
 
-            if(!this.Ricerche.containsKey(location)){
+            if(!Ricerche.containsKey(location)){
                 Ricerche.put(location, Words);
             }
-            Words = this.Ricerche.get(location);
+            Words = Ricerche.get(location);
             for(String eachWord : SplitW) {
                 if(!Words.containsKey(eachWord)) {
                     Words.put(eachWord, 1);
@@ -38,7 +38,7 @@ public class Data {
                     Words.replace(eachWord, count, count+1);
                 }
             }
-            this.Ricerche.put(this.location, Words);
+            Ricerche.put(location, Words);
         }
         catch(Exception e) {
             throw new IllegalArgumentException("Store ERROR");
@@ -50,7 +50,7 @@ public class Data {
             throw new IllegalArgumentException();
         words = words.replaceAll("[^a-zA-Z]", " ");
         words = words.replaceAll("\\s+", " ");
-        words = words.replaceAll("^\\s", "");
+        words = words.replace("^\\s", "");
         words = words.toLowerCase();
         return words;
     }
