@@ -54,27 +54,20 @@ public class Data {
         return words;
     }
 
-    public String Print() {
+    public synchronized String Print() {
         String res = "";
-
-        try {
-
-            for (String loc: this.MSW.keySet()){
-                String value = this.MSW.get(loc).toString();
-                value = value.replaceAll("=", ":");
-                value = value.replace("{", "[");
-                value = value.replace("}", "]");
-                res = res.concat(loc + ": " + value + ", ");
-            }
-            //gui.Update("Parole più frequenti stampate");
-            return res;
+        for (String loc: MSW.keySet()){ //
+            String value = MSW.get(loc).toString();
+            value = value.replaceAll("=", ":");
+            value = value.replace("{", "[");
+            value = value.replace("}", "]");
+            res = res.concat(loc + ": " + value + ", ");
         }
-        catch (Exception e) {
-            throw new IllegalArgumentException("Print");
-        }
+        //gui.Update("Parole più frequenti stampate");
+        return res;
     }
 
-    public String MostSearchedW() {
+    public synchronized String MostSearchedW() {
 
         HashMap<String, Integer> tmp = new HashMap<String, Integer>();
 
@@ -112,7 +105,7 @@ public class Data {
         }
 
         catch(Exception e)	{
-            throw new IllegalArgumentException("MostSEarchedW");
+            throw new IllegalArgumentException("MostSearchedW");
         }
 
     }
