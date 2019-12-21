@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SPLITTER_PROPORTION" value="0.50173974" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="448b7d8b-6dc8-4ac0-a602-bfd04f8c358f" name="Default Changelist" comment="codice completo per app pcad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/ClientGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/ClientGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/client/MyWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/client/MyWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/interfacce/ClientInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/interfacce/ClientInt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/WRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/WRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Data.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/bin/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,75 +19,12 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/MyWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/interfacce/ClientInt.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/AndroidS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/WRunnable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
-              <folding>
-                <element signature="e#1422#1499#0" expanded="true" />
-                <element signature="e#1498#1499#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/ServerGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>manageResearch</find>
-      <find>managePrint</find>
-      <find>MostSearchedW</find>
-      <find>Parole più frequenti stampate</find>
-      <find>Print</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/server</dir>
-    </dirStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -107,91 +34,32 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/server/WRunnable.java" />
-        <option value="$PROJECT_DIR$/src/server/Server.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="380" />
-    <option name="y" value="23" />
-    <option name="width" value="1668" />
-    <option name="height" value="1072" />
-  </component>
+  <component name="ProjectId" id="1VC6xAiDNWOAQKNFVanImoYU5nH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
-              <item name=".settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PROGETTO_PCAD_LAST" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PROGETTO_PCAD_LAST" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/server" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/IdeaProjects/progetto_pcad_windGiusto" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\samue\IdeaProjects\discussioneFINALE\repoXcodiceJAVApcad\src\server" />
+      <recent name="C:\Users\samue\IdeaProjects\discussioneFINALE\repoXcodiceJAVApcad\src\interfacce" />
+      <recent name="C:\Users\samue\IdeaProjects\discussioneFINALE\repoXcodiceJAVApcad\src\client" />
       <recent name="$PROJECT_DIR$/src/server" />
       <recent name="$PROJECT_DIR$/src/interfacce" />
-      <recent name="$PROJECT_DIR$/src/client" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.ServerGUI">
     <configuration name="ClientGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -227,6 +95,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -249,6 +129,10 @@
       <workItem from="1576184567407" duration="682000" />
       <workItem from="1576334336231" duration="2030000" />
       <workItem from="1576428170367" duration="6736000" />
+      <workItem from="1576744975590" duration="3228000" />
+      <workItem from="1576754475812" duration="1262000" />
+      <workItem from="1576774121043" duration="145000" />
+      <workItem from="1576857920499" duration="15554000" />
     </task>
     <task id="LOCAL-00001" summary="parte in java per progetto pcad (da versione su pcSamu)">
       <created>1574247091526</created>
@@ -285,11 +169,29 @@
       <option name="project" value="LOCAL" />
       <updated>1576435751503</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="messo i callable">
+      <created>1576745765083</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576745765083</updated>
+    </task>
+    <task id="LOCAL-00007" summary="re-fix spazi, pulizia">
+      <created>1576747043528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576747043528</updated>
+    </task>
+    <task id="LOCAL-00008" summary="pulizia">
+      <created>1576879665110</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576879665110</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,40 +202,6 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="380" y="23" width="1668" height="1072" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15129152" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29591838" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3377551" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32959184" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32959184" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -343,20 +211,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -383,96 +238,56 @@
     <MESSAGE value="aggiunto in WRunnable metodo per android (manageMostSearchedW)" />
     <MESSAGE value="codice completo per app pcad" />
     <MESSAGE value="sistemato wrunnable" />
-    <option name="LAST_COMMIT_MESSAGE" value="sistemato wrunnable" />
+    <MESSAGE value="messo i callable" />
+    <MESSAGE value="re-fix spazi, pulizia" />
+    <MESSAGE value="pulizia" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulizia" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../PROGETTO_PCAD_QUASI_FINALE/src/server/AndroidS.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PROGETTO_PCAD_QUASI_FINALE/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PROGETTO_PCAD_QUASI_FINALE/src/server/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PROGETTO_PCAD_QUASI_FINALE/src/server/WRunnable.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5635" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/server/Server.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/ClientGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="140" column="47" selection-start-line="140" selection-start-column="31" selection-end-line="140" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/MyWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/interfacce/ClientInt.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid1136.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hs_err_pid1141.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/ServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/AndroidS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/WRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="58" column="90" selection-start-line="58" selection-start-column="90" selection-end-line="58" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PROGETTO__PCAD/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1204" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="105" column="45" lean-forward="true" selection-start-line="105" selection-start-column="45" selection-end-line="105" selection-end-column="45" />
-          <folding>
-            <element signature="e#1422#1499#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#Inspections" timestamp="1576883834775">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1576883834775" />
+    <state x="516" y="268" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576745841863">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="516" y="268" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1576745841863" />
+    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2" timestamp="1576879664150">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576879664150" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1576746905229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1576746905229" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1576875429822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576875429822" />
+    <state width="1493" height="186" key="GridCell.Tab.0.bottom" timestamp="1576887367994">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
+    <state width="1493" height="186" key="GridCell.Tab.0.center" timestamp="1576887367994">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
+    <state width="1493" height="186" key="GridCell.Tab.0.left" timestamp="1576887367993">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576887367993" />
+    <state width="1493" height="186" key="GridCell.Tab.0.right" timestamp="1576887367994">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
+    <state x="849" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1576857922293">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="849" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576857922293" />
+    <state x="462" y="17" width="611" height="789" key="find.popup" timestamp="1576748130754">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="462" y="17" width="611" height="789" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576748130754" />
   </component>
   <component name="masterDetails">
     <states>

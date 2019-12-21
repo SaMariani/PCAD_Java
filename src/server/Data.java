@@ -10,41 +10,40 @@ public class Data {
 
     private String words;
     private String location;
-    private ConcurrentHashMap<String,HashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,HashMap<String,Integer>>(); //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
+    private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>>(); //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
     private ConcurrentHashMap<String,HashMap<String,Integer>> MSW = new ConcurrentHashMap<String,HashMap<String,Integer>>();
 
     public boolean research(String words, String location) {
-        return StoreResearch(location, words);
+        this.location = normalize(location);
+        this.words = normalize(words);
+        if(this.location.isEmpty() || this.words.isEmpty())
+            return false;
+        Store();
+        return true;
     }
-
+    
     public void Store() {
-
-        int count;
-        HashMap<String, Integer> Words = new HashMap<String, Integer>();
-
-        try {
-            String [] SplitW = words.split(" ");
-
-            if(!Ricerche.containsKey(location)){
-                Ricerche.put(location, Words);
-            }
-            Words = Ricerche.get(location);
-            for(String eachWord : SplitW) {
-                if(!Words.containsKey(eachWord)) {
-                    Words.put(eachWord, 1);
-                }
-                else {
-                    count = Words.get(eachWord);
-                    Words.replace(eachWord, count, count+1);
-                }
-            }
-            Ricerche.put(location, Words);
-        }
-        catch(Exception e) {
-            throw new IllegalArgumentException("Store ERROR");
+        ConcurrentHashMap<String, Integer> mapWords = new ConcurrentHashMap<String, Integer>();
+        if(Ricerche.putIfAbsent(location, mapWords)==null)
+            storeWords(mapWords);
+        else
+            //mapWords = Ricerche.get(location);
+            storeWords(Ricerche.get(location));
+    }
+    
+    public void storeWords(ConcurrentHashMap<String, Integer> mapWords) {
+        String [] SplitW = words.split(" ");
+        for(String eachWord : SplitW) {
+            if(mapWords.putIfAbsent(eachWord, 1)!=null)
+                incrementValue(mapWords, eachWord);
         }
     }
-
+    
+    public synchronized void incrementValue(ConcurrentHashMap<String, Integer> mapWords, String key) {
+        int count = mapWords.get(key);
+        mapWords.replace(key, count+1);
+    }
+    
     public String normalize(String words) {
         if(words == null)
             throw new IllegalArgumentException();
@@ -55,27 +54,17 @@ public class Data {
         return words;
     }
 
-    public boolean StoreResearch(String location, String words) {
-        this.location = normalize(location);
-        this.words = normalize(words);
-        if(this.location.isEmpty()||this.words.isEmpty())
-            return false;
-        Store();
-        return true;
-    }
-
     public String Print() {
         String res = "";
 
         try {
 
             for (String loc: this.MSW.keySet()){
-                String key = loc;
                 String value = this.MSW.get(loc).toString();
                 value = value.replaceAll("=", ":");
                 value = value.replace("{", "[");
                 value = value.replace("}", "]");
-                res = res.concat(key + ": " + value + ", ");
+                res = res.concat(loc + ": " + value + ", ");
             }
             //gui.Update("Parole più frequenti stampate");
             return res;
