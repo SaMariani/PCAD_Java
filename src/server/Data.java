@@ -1,11 +1,6 @@
 package server;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-//import java.util.Pair;
 
 public class Data {
 
@@ -13,8 +8,7 @@ public class Data {
     private String location;
     private static final int maxWords = 3;
     private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>>(); //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
-    private ConcurrentHashMap<String,HashMap<String,Integer>> MSW = new ConcurrentHashMap<String,HashMap<String,Integer>>();
-    private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> muletto = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> MSW = new ConcurrentHashMap<>();
 
     public boolean research(String words, String location) {
         this.location = normalize(location);
@@ -34,19 +28,22 @@ public class Data {
             storeWords(Ricerche.get(location));
     }
 
+    public void storeWords(ConcurrentHashMap<String, Integer> mapWords) {
+        String [] SplitW = words.split(" ");
+        for(String eachWord : SplitW) {
+            if(mapWords.putIfAbsent(eachWord, 1)!=null) {
+                incrementValue(mapWords, eachWord);
+            }
+            updateMSW(eachWord, mapWords.get(eachWord));
+        }
+    }
+
     public void updateMSW(String eachWord, int valueI) {
-        System.out.println("word to insert: "+eachWord+" value: "+valueI);
         ConcurrentHashMap<String, Integer> MSWmapWords = new ConcurrentHashMap<String, Integer>();
-        if(muletto.putIfAbsent(location, MSWmapWords)==null) {
-            System.out.println("AGGIUNGO hash to location: " + MSWmapWords);
+        if(MSW.putIfAbsent(location, MSWmapWords)==null)
             updateWords(MSWmapWords, eachWord, valueI);
-        }
-        else {
-            //mapWords = Ricerche.get(location);
-            System.out.println("PRIMA else: "+muletto.get(location));
-            updateWords(muletto.get(location), eachWord, valueI);
-            System.out.println("DOPO else: "+muletto.get(location));
-        }
+        else
+            updateWords(MSW.get(location), eachWord, valueI);
     }
 
     private String findMin(ConcurrentHashMap<String, Integer> MSWmapWords){
@@ -64,41 +61,22 @@ public class Data {
                     min = value;
                     wordMin=W;
                 }
-                System.out.println("DOPO CICLO: "+MSWmapWords);
             }
         }
         return wordMin;
     }
 
     public synchronized void updateWords(ConcurrentHashMap<String, Integer> MSWmapWords, String eachWord, int valueI) {
-        System.out.println("INIT: "+MSWmapWords);
         if(MSWmapWords.size()<maxWords)
-            if(MSWmapWords.putIfAbsent(eachWord, valueI)==null){
-                //++numOfWords;
-                System.out.println("+   +   +   + parola non presente, la aggiungo alla lista parole "+MSWmapWords);
-                return;}
+            if(MSWmapWords.putIfAbsent(eachWord, valueI)==null)
+                return;
         if(MSWmapWords.replace(eachWord, valueI)!=null)
             return;
-        System.out.println("PRIMA CICLO: "+MSWmapWords);
         String wordMin=findMin(MSWmapWords);
         int value = MSWmapWords.get(wordMin);
         if(value < valueI) {
-            System.out.println("RIMUOVO E AGGIUNGO: "+eachWord+" value: "+valueI);
             MSWmapWords.remove(wordMin, value);
             MSWmapWords.put(eachWord, valueI);
-        }
-        System.out.println("DOPO CICLO: "+MSWmapWords);
-        System.out.println("AIUTOOOOOO"+MSWmapWords+Ricerche.get(location));
-    }
-
-    public void storeWords(ConcurrentHashMap<String, Integer> mapWords) {            Ricerche.get(location).put("alee",66);
-
-        String [] SplitW = words.split(" ");
-        for(String eachWord : SplitW) {
-            if(mapWords.putIfAbsent(eachWord, 1)!=null) {
-                incrementValue(mapWords, eachWord);
-            }
-            updateMSW(eachWord, mapWords.get(eachWord));
         }
     }
 
@@ -119,8 +97,8 @@ public class Data {
 
     public synchronized String Print() {
         String res = "";
-        for (String loc: muletto.keySet()){ //
-            String value = muletto.get(loc).toString();
+        for (String loc: MSW.keySet()){ //
+            String value = MSW.get(loc).toString();
             value = value.replaceAll("=", ":");
             value = value.replace("{", "[");
             value = value.replace("}", "]");
