@@ -6,9 +6,9 @@ public class Data {
 
     private String words;
     private String location;
-    private static final int maxWords = 3;
+    private static final int maxWords = 3;//numero delle parole, più frequenti per ogni città, da stampare
     private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> Ricerche = new ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>>(); //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
-    private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> MSW = new ConcurrentHashMap<>();
+    private ConcurrentHashMap<String,ConcurrentHashMap<String,Integer>> MSW = new ConcurrentHashMap<>();//usiamo per memorizzare le parole più frequenti
 
     public boolean research(String words, String location) {
         this.location = normalize(location);
@@ -19,16 +19,15 @@ public class Data {
         return true;
     }
 
-    public void Store() {
+    private void Store() {
         ConcurrentHashMap<String, Integer> mapWords = new ConcurrentHashMap<String, Integer>();
         if(Ricerche.putIfAbsent(location, mapWords)==null)
             storeWords(mapWords);
         else
-            //mapWords = Ricerche.get(location);
             storeWords(Ricerche.get(location));
     }
 
-    public void storeWords(ConcurrentHashMap<String, Integer> mapWords) {
+    private void storeWords(ConcurrentHashMap<String, Integer> mapWords) {
         String [] SplitW = words.split(" ");
         for(String eachWord : SplitW) {
             if(mapWords.putIfAbsent(eachWord, 1)!=null) {
@@ -38,15 +37,20 @@ public class Data {
         }
     }
 
-    public void updateMSW(String eachWord, int valueI) {
-        ConcurrentHashMap<String, Integer> MSWmapWords = new ConcurrentHashMap<String, Integer>();
-        if(MSW.putIfAbsent(location, MSWmapWords)==null)
-            updateWords(MSWmapWords, eachWord, valueI);
-        else
-            updateWords(MSW.get(location), eachWord, valueI);
+    private synchronized void incrementValue(ConcurrentHashMap<String, Integer> mapWords, String key) {
+        int count = mapWords.get(key);
+        mapWords.replace(key, count+1);
     }
 
-    public synchronized void updateWords(ConcurrentHashMap<String, Integer> MSWmapWords, String eachWord, int valueI) {
+    private void updateMSW(String eachWord, int valueI) {
+        ConcurrentHashMap<String, Integer> MSWmapWords = new ConcurrentHashMap<String, Integer>();
+        if(MSW.putIfAbsent(location, MSWmapWords)==null)
+            updateWordsMSW(MSWmapWords, eachWord, valueI);
+        else
+            updateWordsMSW(MSW.get(location), eachWord, valueI);
+    }
+
+    private synchronized void updateWordsMSW(ConcurrentHashMap<String, Integer> MSWmapWords, String eachWord, int valueI) {
         if(MSWmapWords.size()<maxWords)
             if(MSWmapWords.putIfAbsent(eachWord, valueI)==null)
                 return;
@@ -80,12 +84,7 @@ public class Data {
         return wordMin;
     }
 
-    private synchronized void incrementValue(ConcurrentHashMap<String, Integer> mapWords, String key) {
-        int count = mapWords.get(key);
-        mapWords.replace(key, count+1);
-    }
-
-    public String normalize(String words) {
+    private String normalize(String words) {
         if(words == null)
             throw new IllegalArgumentException();
         words = words.replaceAll("[^a-zA-Z]", " ");

@@ -7,6 +7,7 @@
     <list default="true" id="448b7d8b-6dc8-4ac0-a602-bfd04f8c358f" name="Default Changelist" comment="codice completo per app pcad">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/interfacce/ServerInt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/server/WRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/server/WRunnable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/Data.java" afterDir="false" />
@@ -42,6 +43,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -132,7 +137,11 @@
       <workItem from="1576744975590" duration="3228000" />
       <workItem from="1576754475812" duration="1262000" />
       <workItem from="1576774121043" duration="145000" />
-      <workItem from="1576857920499" duration="15554000" />
+      <workItem from="1576857920499" duration="16149000" />
+      <workItem from="1576926181101" duration="5036000" />
+      <workItem from="1577024175766" duration="19460000" />
+      <workItem from="1577092602455" duration="12688000" />
+      <workItem from="1577108600434" duration="2874000" />
     </task>
     <task id="LOCAL-00001" summary="parte in java per progetto pcad (da versione su pcSamu)">
       <created>1574247091526</created>
@@ -190,7 +199,63 @@
       <option name="project" value="LOCAL" />
       <updated>1576879665110</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed race condition of insert">
+      <created>1576887666933</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576887666933</updated>
+    </task>
+    <task id="LOCAL-00010" summary="synchro print">
+      <created>1576931839213</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576931839213</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rifatto MSW in modo che si aggiorni dopo ogni insert">
+      <created>1577099118431</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1577099118432</updated>
+    </task>
+    <task id="LOCAL-00012" summary="findMin init values">
+      <created>1577101052727</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577101052727</updated>
+    </task>
+    <task id="LOCAL-00013" summary="pulizia">
+      <created>1577101483690</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577101483690</updated>
+    </task>
+    <task id="LOCAL-00014" summary="eliminato print, trasferita in MSW">
+      <created>1577101780217</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1577101780217</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fix normalize">
+      <created>1577106865332</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1577106865332</updated>
+    </task>
+    <task id="LOCAL-00016" summary="codice completo per app pcad">
+      <created>1577112799309</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1577112799309</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -236,12 +301,18 @@
     <MESSAGE value="parte in java per progetto pcad (da versione su pcSamu)" />
     <MESSAGE value="versione quasi finale Massi" />
     <MESSAGE value="aggiunto in WRunnable metodo per android (manageMostSearchedW)" />
-    <MESSAGE value="codice completo per app pcad" />
     <MESSAGE value="sistemato wrunnable" />
     <MESSAGE value="messo i callable" />
     <MESSAGE value="re-fix spazi, pulizia" />
+    <MESSAGE value="fixed race condition of insert" />
+    <MESSAGE value="synchro print" />
+    <MESSAGE value="rifatto MSW in modo che si aggiorni dopo ogni insert" />
+    <MESSAGE value="findMin init values" />
     <MESSAGE value="pulizia" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulizia" />
+    <MESSAGE value="eliminato print, trasferita in MSW" />
+    <MESSAGE value="fix normalize" />
+    <MESSAGE value="codice completo per app pcad" />
+    <option name="LAST_COMMIT_MESSAGE" value="codice completo per app pcad" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Inspections" timestamp="1576883834775">
@@ -252,10 +323,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="268" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1576745841863" />
-    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2" timestamp="1576879664150">
+    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2" timestamp="1577112812528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576879664150" />
+    <state x="310" y="6" width="1127" height="811" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1577112812528" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1576746905229">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -264,30 +335,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576875429822" />
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom" timestamp="1576887367994">
+    <state width="1493" height="157" key="GridCell.Tab.0.bottom" timestamp="1577113484665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
-    <state width="1493" height="186" key="GridCell.Tab.0.center" timestamp="1576887367994">
+    <state width="1493" height="157" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577113484665" />
+    <state width="1493" height="157" key="GridCell.Tab.0.center" timestamp="1577113484665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
-    <state width="1493" height="186" key="GridCell.Tab.0.left" timestamp="1576887367993">
+    <state width="1493" height="157" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1577113484665" />
+    <state width="1493" height="157" key="GridCell.Tab.0.left" timestamp="1577113484665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1576887367993" />
-    <state width="1493" height="186" key="GridCell.Tab.0.right" timestamp="1576887367994">
+    <state width="1493" height="157" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1577113484665" />
+    <state width="1493" height="157" key="GridCell.Tab.0.right" timestamp="1577113484665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1576887367994" />
-    <state x="849" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1576857922293">
+    <state width="1493" height="157" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1577113484665" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1577059747713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="849" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576857922293" />
-    <state x="462" y="17" width="611" height="789" key="find.popup" timestamp="1576748130754">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1577059747713" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1577059747713">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="462" y="17" width="611" height="789" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576748130754" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1577059747713" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1577059747713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1577059747713" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1577059747713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1577059747713" />
+    <state x="277" y="54" key="SettingsEditor" timestamp="1577037432560">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1577037432560" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1577106893599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1577106893599" />
+    <state x="849" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1577108600747">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="849" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1577108600747" />
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1577111750531">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="305" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1577111750531" />
+    <state x="462" y="17" width="611" height="789" key="find.popup" timestamp="1577103715956">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="462" y="17" width="611" height="789" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1577103715956" />
   </component>
   <component name="masterDetails">
     <states>
