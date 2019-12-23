@@ -46,6 +46,20 @@ public class Data {
             updateWords(MSW.get(location), eachWord, valueI);
     }
 
+    public synchronized void updateWords(ConcurrentHashMap<String, Integer> MSWmapWords, String eachWord, int valueI) {
+        if(MSWmapWords.size()<maxWords)
+            if(MSWmapWords.putIfAbsent(eachWord, valueI)==null)
+                return;
+        if(MSWmapWords.replace(eachWord, valueI)!=null)
+            return;
+        String wordMin=findMin(MSWmapWords);
+        int value = MSWmapWords.get(wordMin);
+        if(value < valueI) {
+            MSWmapWords.remove(wordMin, value);
+            MSWmapWords.put(eachWord, valueI);
+        }
+    }
+
     private String findMin(ConcurrentHashMap<String, Integer> MSWmapWords){
         int min=0;
         String wordMin=null;
@@ -66,21 +80,7 @@ public class Data {
         return wordMin;
     }
 
-    public synchronized void updateWords(ConcurrentHashMap<String, Integer> MSWmapWords, String eachWord, int valueI) {
-        if(MSWmapWords.size()<maxWords)
-            if(MSWmapWords.putIfAbsent(eachWord, valueI)==null)
-                return;
-        if(MSWmapWords.replace(eachWord, valueI)!=null)
-            return;
-        String wordMin=findMin(MSWmapWords);
-        int value = MSWmapWords.get(wordMin);
-        if(value < valueI) {
-            MSWmapWords.remove(wordMin, value);
-            MSWmapWords.put(eachWord, valueI);
-        }
-    }
-
-    public synchronized void incrementValue(ConcurrentHashMap<String, Integer> mapWords, String key) {
+    private synchronized void incrementValue(ConcurrentHashMap<String, Integer> mapWords, String key) {
         int count = mapWords.get(key);
         mapWords.replace(key, count+1);
     }
@@ -95,7 +95,7 @@ public class Data {
         return words;
     }
 
-    public synchronized String Print() {
+    public synchronized String MostSearchedW() {
         String res = "";
         for (String loc: MSW.keySet()){ //
             String value = MSW.get(loc).toString();
@@ -106,9 +106,5 @@ public class Data {
         }
         //gui.Update("Parole più frequenti stampate");
         return res;
-    }
-
-    public synchronized String MostSearchedW() {
-        return Print();
     }
 }
