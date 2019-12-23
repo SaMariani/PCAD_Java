@@ -90,7 +90,7 @@ public class Data {
             throw new IllegalArgumentException();
         words = words.replaceAll("[^a-zA-Z]", " ");
         words = words.replaceAll("\\s+", " ");
-        words = words.replace("^\\s", "");
+        words = words.replaceAll("^\\s", "");
         words = words.toLowerCase();
         return words;
     }
