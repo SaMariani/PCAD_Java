@@ -17,9 +17,6 @@ public class Server implements ServerInt{
 	protected ExecutorService pool;
 	ConcurrentHashMap<String,HashMap<String,Integer>> Ricerche; //hashMap che funziona da "database" in cui salviamo le parole cercate nei vari luoghi
 	ConcurrentHashMap<String,HashMap<String,Integer>> MSW;      //hashmap per le 3 parole più cercate di ogni città M(ost)S(earched)W(ords)
-	public String words = "";
-	public String location = "";
-	Random random;
 	protected ServerGUI gui;
 	public ClientGUI Cgui;
 	private Data data;
