@@ -50,15 +50,22 @@ public class Data {
     }
 
     private String findMin(ConcurrentHashMap<String, Integer> MSWmapWords){
-        int min=10;
+        int min=0;
         String wordMin=null;
+        boolean flag=true;
         for (String W: MSWmapWords.keySet()){
-            Integer value = MSWmapWords.get(W);
-            if(value < min) {
-                min = value;
+            if(flag) {
                 wordMin=W;
+                min=MSWmapWords.get(W);
+                flag=false;
+            }else{
+                int value = MSWmapWords.get(W);
+                if(value < min) {
+                    min = value;
+                    wordMin=W;
+                }
+                System.out.println("DOPO CICLO: "+MSWmapWords);
             }
-            System.out.println("DOPO CICLO: "+MSWmapWords);
         }
         return wordMin;
     }
